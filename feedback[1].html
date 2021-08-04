@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+     <title>N.RAMYA 2019115076</title>
+	 <meta charset="Utf-8">
+	 <meta name="author" content="N.Ramya">
+	 <meta name="keywords" content="Index,html,jss">
+	<style>
+	      html{
+		        margin :10px;
+				border-width:thick;
+				padding:20px;
+				 
+				width:100%;
+				}
+			 body{
+			    background-image:url(bgimg11.jpg);
+				background-blend-mode: lighten;
+				background-attachment:scroll;
+			    font-family:'open sans',sans-serif;
+				font-size:30px;
+				color:#000000;
+				background-position:center-right;
+				background-repeat:no-repeat;
+				}
+				#box{
+				font-family:georgia,garamond,sans-serif;
+				}
+</style>
+</head>
+<body>
+<script>
+ function myfunc(){
+arr=new Array();
+var a=document.forms["form1"]["R1"].value;
+var a1=a.toLowerCase();
+if(a1=="yes"){
+arr.push("Glad that you liked it!Thank you so much for your valuable feedback! Good luck for your ");}
+else{
+arr.push("Sorry! Couldn't meet up to your expectations! Will work harder! Thank you! Good luck for your ");
+}
+var b=document.forms["form1"]["reasons"].value;
+arr.push(b);
+var array=arr.toString();
+document.write(array);
+}
+</script>
+<form action="feedback.html" method="POST" class="container1" id="box" name="form1">
+		<h1>FEEDBACK</h1>
+		<font size="5">
+		<ul>
+		<li>Does our Hotel 'The Sparkle' meet all your requirements?<br>
+		 <input type="radio" name="R1" value="Yes"/> YES<br>
+		 <input type="radio" name="R1" value="Partially"/> PARTIALLY<br>
+		 <input type="radio" name="R1" value="No"/> NO<br>
+		 </li>
+		 <br>
+		<li>What is the reason for your visit?<br>
+		<select name="reasons">
+		   <option value="Business meeting" name="reasons">Business Meetings</option>
+		   <option value="Social Party" name="reasons">Social Party</option>
+		   <option value="Family trip" name="reasons">Family Trip</option>
+		    <option value="Others" name="reasons">Others</option><br>
+			</select>
+			</li>
+			<br>
+		<li>Do you have any suggestions to make our website better?<br>
+		<input type="text" size="60" name="sugg"><br>
+		 </ul><br>
+		 <input type="submit" value="Submit" onclick=myfunc();> <img src="smiley.jpg" alt="Smiley face" width="50" height="50" align="top"/>
+		 <br>
+		 <p id="result"></p>
+		 </font>
+ </form>
+
+</body>
+</html>
